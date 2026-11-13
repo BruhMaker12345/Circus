@@ -2,479 +2,142 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<head>
-<meta charset="UTF-8">
-<!-- 1. Оптимизированный Title (самый важный тег для SEO, отображается во вкладке браузера и в поиске) -->
+<!-- 🔥 КРИТИЧНО ДЛЯ МОБИЛЬНЫХ: мета-тег viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO (сохранено полностью) -->
 <title>Государственный цирк Якутии в Якутске | Билеты, афиша и шоу Diamond Circus</title>
-
-<!-- 2. Meta Description (краткое описание для сниппета в поиске Яндекс/Google, повышает кликабельность) -->
 <meta name="description" content="Официальный сайт Государственного цирка Якутии (Diamond Circus). Купить билеты на цирковые представления и шоу в Якутске, заказать экскурсию за кулисы или детский праздник.">
-
-<!-- 3. Meta Keywords (сейчас почти не учитывается Google, но Яндекс иногда смотрит, плюс это хорошая практика для обучения) -->
 <meta name="keywords" content="Государственный цирк Якутии, цирк Якутск, купить билеты в цирк, Саха цирк афиша, экскурсия за кулисы цирка, детские праздники в Якутске">
 
-<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<!-- 🔥 ПРЕДПОДКЛЮЧЕНИЕ CDN (ускоряет загрузку Font Awesome) -->
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
-<!-- Остальные ваши стили и подключения... -->
+<!-- 🔥 ASYNC ЗАГРУЗКА FONT AWESOME (не блокирует рендеринг) -->
 <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+<!-- 🔥 PRELOAD ГЛАВНОГО ИЗОБРАЖЕНИЯ (LCP) с высоким приоритетом -->
+<link rel="preload" as="image" href="image7.webp" fetchpriority="high" imagesrcset="image7.webp 1920w, image7-mobile.webp 768w" imagesizes="100vw">
+
 <style>
-:root {
---primary-color: #ff6b35;
---secondary-color: #f7931e;
---accent-warm: #ffd23f;
---bg-light: #ffffff;
---bg-soft: #fff8f0;
---text-dark: #2b2d42;
---text-medium: #6c757d;
---border-color: #ffe5d0;
---disabled-bg: #cccccc;
---disabled-text: #999999;
-}
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-background-color: var(--bg-light);
-color: var(--text-dark);
-line-height: 1.6;
-}
-a { text-decoration: none; color: inherit; transition: 0.3s; }
-ul { list-style: none; }
-img { max-width: 100%; height: auto; display: block; }
-header {
-background: white;
-padding: 20px 5%;
-position: sticky;
-top: 0;
-z-index: 1000;
-box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-.logo {
-font-size: 1.8rem;
-font-weight: bold;
-color: var(--primary-color);
-display: flex;
-align-items: center;
-gap: 10px;
-}
-.logo i { color: var(--secondary-color); }
-nav ul { display: flex; gap: 30px; }
-nav a {
-color: var(--text-dark);
-font-weight: 500;
-position: relative;
-}
-nav a:hover { color: var(--primary-color); }
-nav a::after {
-content: '';
-position: absolute;
-bottom: -5px;
-left: 0;
-width: 0;
-height: 2px;
-background: var(--primary-color);
-transition: width 0.3s;
-}
-nav a:hover::after { width: 100%; }
-.btn-buy {
-background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-color: white;
-padding: 12px 30px;
-border-radius: 25px;
-font-weight: bold;
-display: inline-flex;
-align-items: center;
-gap: 8px;
-}
-.btn-buy:hover {
-transform: translateY(-2px);
-box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
-}
-.mobile-menu-btn { display: none; font-size: 24px; cursor: pointer; color: var(--primary-color); }
-.hero {
-min-height: 600px;
-background-color: #ff6b35;
-background-image: url('image7.webp');
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
-padding: 80px 20px;
-color: white;
-position: relative;
-overflow: hidden;
-}
-.hero::before {
-content: '';
-position: absolute;
-inset: 0;
-background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
-z-index: 0;
-}
-.hero-content {
-position: relative;
-z-index: 1;
-max-width: 800px;
-text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-}
-.hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
-.hero p { font-size: 1.3rem; margin-bottom: 30px; opacity: 0.95; }
-.hero .btn-buy {
-background: white;
-color: var(--primary-color);
-font-size: 1.2rem;
-padding: 15px 40px;
-}
-.hero .btn-buy:hover {
-background: var(--accent-warm);
-color: var(--text-dark);
-}
-section { padding: 80px 10%; }
-.section-title {
-text-align: center;
-font-size: 2.5rem;
-margin-bottom: 50px;
-color: var(--text-dark);
-position: relative;
-}
-.section-title::after {
-content: '';
-display: block;
-width: 80px;
-height: 4px;
-background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-margin: 15px auto;
-border-radius: 2px;
-}
-.afisha-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-gap: 30px;
-}
-.event-card {
-background: white;
-border-radius: 15px;
-overflow: hidden;
-box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-transition: transform 0.3s, box-shadow 0.3s;
-}
-.event-card:hover {
-transform: translateY(-10px);
-box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
-}
-.card-img {
-height: 220px;
-width: 100%;
-object-fit: cover;
-background-color: var(--border-color);
-display: block;
-}
-.card-content { padding: 25px; }
-.card-date {
-color: var(--primary-color);
-font-weight: bold;
-font-size: 0.9rem;
-display: flex;
-align-items: center;
-gap: 5px;
-margin-bottom: 10px;
-}
-.card-title { font-size: 1.5rem; margin: 10px 0; color: var(--text-dark); }
-.card-price {
-font-size: 1.3rem;
-color: var(--secondary-color);
-font-weight: bold;
-margin-bottom: 15px;
-}
-.card-desc { color: var(--text-medium); margin-bottom: 20px; font-size: 0.95rem; }
-.btn-card {
-display: block;
-width: 100%;
-padding: 12px;
-text-align: center;
-background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-color: white;
-border-radius: 8px;
-font-weight: bold;
-border: none;
-cursor: pointer;
-transition: all 0.3s;
-}
-.btn-card:hover {
-transform: translateY(-2px);
-box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
-}
-.news-section { background: var(--bg-soft); }
-.news-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 30px;
-}
-.news-card {
-background: white;
-border-radius: 12px;
-padding: 25px;
-box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-transition: transform 0.3s;
-border-left: 4px solid var(--primary-color);
-}
-.news-card:hover { transform: translateY(-5px); }
-.news-date {
-color: var(--text-medium);
-font-size: 0.9rem;
-margin-bottom: 10px;
-display: flex;
-align-items: center;
-gap: 5px;
-}
-.news-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--text-dark); }
-.news-excerpt { color: var(--text-medium); margin-bottom: 15px; }
-.news-link {
-color: var(--primary-color);
-font-weight: bold;
-display: inline-flex;
-align-items: center;
-gap: 5px;
-}
-.services-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-gap: 30px;
-}
-.service-card {
-background: white;
-border-radius: 15px;
-padding: 30px;
-text-align: center;
-box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-transition: transform 0.3s;
-border: 2px solid transparent;
-}
-.service-card:hover {
-transform: translateY(-10px);
-border-color: var(--primary-color);
-}
-.service-icon {
-width: 80px;
-height: 80px;
-background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-margin: 0 auto 20px;
-color: white;
-font-size: 2rem;
-}
-.service-card h3 { font-size: 1.4rem; margin-bottom: 15px; color: var(--text-dark); }
-.service-card p { color: var(--text-medium); margin-bottom: 15px; }
-.service-phone { color: var(--primary-color); font-weight: bold; font-size: 1.1rem; }
-.about-section { background: var(--bg-soft); }
-.about-content {
-display: flex;
-flex-wrap: wrap;
-gap: 50px;
-align-items: center;
-}
-.about-text { flex: 1; min-width: 300px; }
-.about-text h3 { font-size: 2rem; margin-bottom: 20px; color: var(--text-dark); }
-.about-text p { color: var(--text-medium); margin-bottom: 15px; font-size: 1.05rem; }
-.about-stats { display: flex; gap: 30px; margin-top: 30px; }
-.stat-item { text-align: center; }
-.stat-number {
-font-size: 2.5rem;
-font-weight: bold;
-background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
-}
-.stat-label { color: var(--text-medium); font-size: 0.9rem; }
-.about-image {
-flex: 1;
-min-width: 300px;
-height: 400px;
-width: 100%;
-object-fit: cover;
-background-color: var(--border-color);
-border-radius: 20px;
-box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-display: block;
-}
-.gallery-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 20px;
-}
-.gallery-grid img {
-width: 100%;
-height: 250px;
-object-fit: cover;
-border-radius: 15px;
-box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-.contact-section { background: white; }
-.contact-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 50px;
-}
-.contact-info h3 { font-size: 1.8rem; margin-bottom: 20px; color: var(--text-dark); }
-.contact-item {
-display: flex;
-align-items: flex-start;
-gap: 15px;
-margin-bottom: 25px;
-}
-.contact-icon {
-width: 50px;
-height: 50px;
-background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-color: white;
-font-size: 1.3rem;
-flex-shrink: 0;
-}
-.contact-details h4 { color: var(--text-dark); margin-bottom: 5px; }
-.contact-details p { color: var(--text-medium); }
-.contact-details a { color: var(--primary-color); font-weight: bold; }
-.social-links { display: flex; gap: 15px; margin-top: 30px; }
-.social-link {
-width: 45px;
-height: 45px;
-background: var(--bg-soft);
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-color: var(--primary-color);
-font-size: 1.2rem;
-transition: all 0.3s;
-}
-.social-link:hover {
-background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-color: white;
-transform: translateY(-3px);
-}
-.form-container {
-background: var(--bg-soft);
-padding: 40px;
-border-radius: 15px;
-border: 2px solid var(--border-color);
-}
-.form-container h3 { font-size: 1.8rem; margin-bottom: 25px; color: var(--text-dark); }
-.form-group { margin-bottom: 20px; }
-.form-group label {
-display: block;
-margin-bottom: 8px;
-color: var(--text-dark);
-font-weight: 500;
-}
-.form-group input,
-.form-group textarea {
-width: 100%;
-padding: 12px 15px;
-border: 2px solid var(--border-color);
-border-radius: 8px;
-font-size: 1rem;
-transition: border-color 0.3s;
-background: white;
-font-family: inherit;
-}
-.form-group input:focus,
-.form-group textarea:focus {
-outline: none;
-border-color: var(--primary-color);
-}
-.consent-group {
-display: flex;
-align-items: flex-start;
-gap: 10px;
-margin-bottom: 20px;
-margin-top: 20px;
-}
-.consent-group input[type="checkbox"] {
-width: auto;
-margin-top: 4px;
-cursor: pointer;
-flex-shrink: 0;
-}
-.consent-group label {
-font-size: 0.9rem;
-color: var(--text-medium);
-line-height: 1.5;
-cursor: pointer;
-margin-bottom: 0;
-}
-.consent-group a {
-color: var(--primary-color);
-font-weight: 500;
-text-decoration: underline;
-}
-.consent-group a:hover { color: var(--secondary-color); }
-.btn-submit {
-background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-color: white;
-border: none;
-padding: 15px 30px;
-font-size: 1.1rem;
-font-weight: bold;
-cursor: pointer;
-width: 100%;
-border-radius: 8px;
-transition: all 0.3s;
-}
-.btn-submit:hover:not(:disabled) {
-transform: translateY(-2px);
-box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
-}
-.btn-submit:disabled {
-background: var(--disabled-bg);
-color: var(--disabled-text);
-cursor: not-allowed;
-transform: none;
-box-shadow: none;
-}
-footer {
-background: linear-gradient(135deg, var(--text-dark), #1a1a2e);
-color: white;
-padding: 50px 10% 30px;
-}
-.footer-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-gap: 40px;
-margin-bottom: 40px;
-}
-.footer-col h4 { margin-bottom: 20px; color: var(--secondary-color); }
-.footer-col ul li { margin-bottom: 10px; }
-.footer-col a { color: #adb5bd; transition: color 0.3s; }
-.footer-col a:hover { color: var(--secondary-color); }
-.footer-bottom {
-border-top: 1px solid #495057;
-padding-top: 30px;
-text-align: center;
-color: #adb5bd;
-font-size: 0.9rem;
-}
-@media (max-width: 768px) {
-nav ul { display: none; }
-.mobile-menu-btn { display: block; }
-.hero h1 { font-size: 2.2rem; }
-.hero p { font-size: 1.1rem; }
-header { padding: 15px 20px; }
-section { padding: 50px 5%; }
-.contact-grid { grid-template-columns: 1fr; }
-.about-content { flex-direction: column; }
+:root{--primary-color:#ff6b35;--secondary-color:#f7931e;--accent-warm:#ffd23f;--bg-light:#ffffff;--bg-soft:#fff8f0;--text-dark:#2b2d42;--text-medium:#6c757d;--border-color:#ffe5d0;--disabled-bg:#cccccc;--disabled-text:#999999}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background-color:var(--bg-light);color:var(--text-dark);line-height:1.6}
+a{text-decoration:none;color:inherit;transition:.3s}
+ul{list-style:none}
+img{max-width:100%;height:auto;display:block}
+header{background:#fff;padding:20px 5%;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.1);display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.8rem;font-weight:bold;color:var(--primary-color);display:flex;align-items:center;gap:10px}
+.logo i{color:var(--secondary-color)}
+nav ul{display:flex;gap:30px}
+nav a{color:var(--text-dark);font-weight:500;position:relative}
+nav a:hover{color:var(--primary-color)}
+nav a::after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:2px;background:var(--primary-color);transition:width .3s}
+nav a:hover::after{width:100%}
+.btn-buy{background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));color:#fff;padding:12px 30px;border-radius:25px;font-weight:bold;display:inline-flex;align-items:center;gap:8px}
+.btn-buy:hover{transform:translateY(-2px);box-shadow:0 5px 15px rgba(255,107,53,.4)}
+.mobile-menu-btn{display:none;font-size:24px;cursor:pointer;color:var(--primary-color)}
+.hero{min-height:600px;background-color:#ff6b35;background-image:url('image7.webp');background-size:cover;background-position:center;background-repeat:no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 20px;color:#fff;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.6),rgba(0,0,0,.3));z-index:0}
+.hero-content{position:relative;z-index:1;max-width:800px;text-shadow:2px 2px 8px rgba(0,0,0,.8)}
+.hero h1{font-size:3.5rem;margin-bottom:20px}
+.hero p{font-size:1.3rem;margin-bottom:30px;opacity:.95}
+.hero .btn-buy{background:#fff;color:var(--primary-color);font-size:1.2rem;padding:15px 40px}
+.hero .btn-buy:hover{background:var(--accent-warm);color:var(--text-dark)}
+section{padding:80px 10%}
+.section-title{text-align:center;font-size:2.5rem;margin-bottom:50px;color:var(--text-dark);position:relative}
+.section-title::after{content:'';display:block;width:80px;height:4px;background:linear-gradient(90deg,var(--primary-color),var(--secondary-color));margin:15px auto;border-radius:2px}
+.afisha-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px}
+.event-card{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 5px 20px rgba(0,0,0,.1);transition:transform .3s,box-shadow .3s}
+.event-card:hover{transform:translateY(-10px);box-shadow:0 10px 30px rgba(255,107,53,.2)}
+.card-img{height:220px;width:100%;object-fit:cover;background-color:var(--border-color);display:block}
+.card-content{padding:25px}
+.card-date{color:var(--primary-color);font-weight:bold;font-size:.9rem;display:flex;align-items:center;gap:5px;margin-bottom:10px}
+.card-title{font-size:1.5rem;margin:10px 0;color:var(--text-dark)}
+.card-price{font-size:1.3rem;color:var(--secondary-color);font-weight:bold;margin-bottom:15px}
+.card-desc{color:var(--text-medium);margin-bottom:20px;font-size:.95rem}
+.btn-card{display:block;width:100%;padding:12px;text-align:center;background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));color:#fff;border-radius:8px;font-weight:bold;border:none;cursor:pointer;transition:all .3s}
+.btn-card:hover{transform:translateY(-2px);box-shadow:0 5px 15px rgba(255,107,53,.4)}
+.news-section{background:var(--bg-soft)}
+.news-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+.news-card{background:#fff;border-radius:12px;padding:25px;box-shadow:0 3px 15px rgba(0,0,0,.08);transition:transform .3s;border-left:4px solid var(--primary-color)}
+.news-card:hover{transform:translateY(-5px)}
+.news-date{color:var(--text-medium);font-size:.9rem;margin-bottom:10px;display:flex;align-items:center;gap:5px}
+.news-title{font-size:1.3rem;margin-bottom:15px;color:var(--text-dark)}
+.news-excerpt{color:var(--text-medium);margin-bottom:15px}
+.news-link{color:var(--primary-color);font-weight:bold;display:inline-flex;align-items:center;gap:5px}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.service-card{background:#fff;border-radius:15px;padding:30px;text-align:center;box-shadow:0 5px 20px rgba(0,0,0,.1);transition:transform .3s;border:2px solid transparent}
+.service-card:hover{transform:translateY(-10px);border-color:var(--primary-color)}
+.service-icon{width:80px;height:80px;background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;color:#fff;font-size:2rem}
+.service-card h3{font-size:1.4rem;margin-bottom:15px;color:var(--text-dark)}
+.service-card p{color:var(--text-medium);margin-bottom:15px}
+.service-phone{color:var(--primary-color);font-weight:bold;font-size:1.1rem}
+.about-section{background:var(--bg-soft)}
+.about-content{display:flex;flex-wrap:wrap;gap:50px;align-items:center}
+.about-text{flex:1;min-width:300px}
+.about-text h3{font-size:2rem;margin-bottom:20px;color:var(--text-dark)}
+.about-text p{color:var(--text-medium);margin-bottom:15px;font-size:1.05rem}
+.about-stats{display:flex;gap:30px;margin-top:30px}
+.stat-item{text-align:center}
+.stat-number{font-size:2.5rem;font-weight:bold;background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-label{color:var(--text-medium);font-size:.9rem}
+.about-image{flex:1;min-width:300px;height:400px;width:100%;object-fit:cover;background-color:var(--border-color);border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.2);display:block}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.gallery-grid img{width:100%;height:250px;object-fit:cover;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,.1)}
+.contact-section{background:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.contact-info h3{font-size:1.8rem;margin-bottom:20px;color:var(--text-dark)}
+.contact-item{display:flex;align-items:flex-start;gap:15px;margin-bottom:25px}
+.contact-icon{width:50px;height:50px;background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.3rem;flex-shrink:0}
+.contact-details h4{color:var(--text-dark);margin-bottom:5px}
+.contact-details p{color:var(--text-medium)}
+.contact-details a{color:var(--primary-color);font-weight:bold}
+.social-links{display:flex;gap:15px;margin-top:30px}
+.social-link{width:45px;height:45px;background:var(--bg-soft);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--primary-color);font-size:1.2rem;transition:all .3s}
+.social-link:hover{background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));color:#fff;transform:translateY(-3px)}
+.form-container{background:var(--bg-soft);padding:40px;border-radius:15px;border:2px solid var(--border-color)}
+.form-container h3{font-size:1.8rem;margin-bottom:25px;color:var(--text-dark)}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;margin-bottom:8px;color:var(--text-dark);font-weight:500}
+.form-group input,.form-group textarea{width:100%;padding:12px 15px;border:2px solid var(--border-color);border-radius:8px;font-size:1rem;transition:border-color .3s;background:#fff;font-family:inherit}
+.form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--primary-color)}
+.consent-group{display:flex;align-items:flex-start;gap:10px;margin-bottom:20px;margin-top:20px}
+.consent-group input[type="checkbox"]{width:auto;margin-top:4px;cursor:pointer;flex-shrink:0}
+.consent-group label{font-size:.9rem;color:var(--text-medium);line-height:1.5;cursor:pointer;margin-bottom:0}
+.consent-group a{color:var(--primary-color);font-weight:500;text-decoration:underline}
+.consent-group a:hover{color:var(--secondary-color)}
+.btn-submit{background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));color:#fff;border:none;padding:15px 30px;font-size:1.1rem;font-weight:bold;cursor:pointer;width:100%;border-radius:8px;transition:all .3s}
+.btn-submit:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 5px 15px rgba(255,107,53,.4)}
+.btn-submit:disabled{background:var(--disabled-bg);color:var(--disabled-text);cursor:not-allowed;transform:none;box-shadow:none}
+footer{background:linear-gradient(135deg,var(--text-dark),#1a1a2e);color:#fff;padding:50px 10% 30px}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;margin-bottom:40px}
+.footer-col h4{margin-bottom:20px;color:var(--secondary-color)}
+.footer-col ul li{margin-bottom:10px}
+.footer-col a{color:#adb5bd;transition:color .3s}
+.footer-col a:hover{color:var(--secondary-color)}
+.footer-bottom{border-top:1px solid #495057;padding-top:30px;text-align:center;color:#adb5bd;font-size:.9rem}
+
+/* 🔥 МОБИЛЬНАЯ АДАПТАЦИЯ */
+@media (max-width:768px){
+nav ul{display:none}
+.mobile-menu-btn{display:block}
+.hero{min-height:500px;padding:60px 20px}
+.hero h1{font-size:2rem}
+.hero p{font-size:1rem}
+header{padding:15px 20px}
+.logo{font-size:1.3rem}
+section{padding:50px 5%}
+.section-title{font-size:1.8rem;margin-bottom:30px}
+.contact-grid{grid-template-columns:1fr}
+.about-content{flex-direction:column}
+.about-image{height:250px}
+.afisha-grid,.news-grid,.services-grid,.gallery-grid{grid-template-columns:1fr}
+.card-img{height:180px}
+.stat-number{font-size:2rem}
+.form-container{padding:25px}
 }
 </style>
 </head>
@@ -499,6 +162,7 @@ Diamond Circus
 </a>
 <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
 </header>
+
 <section class="hero">
 <div class="hero-content">
 <h1>Магия Северного Цирка в Якутске</h1>
@@ -509,11 +173,12 @@ Diamond Circus
 </a>
 </div>
 </section>
+
 <section id="afisha">
 <h2 class="section-title">Ближайшие представления</h2>
 <div class="afisha-grid">
 <div class="event-card">
-<img class="card-img" src="image1.webp" alt="Время Приключений" loading="lazy">
+<img class="card-img" src="image1.webp" alt="Цирковое представление Время Приключений в Якутске" loading="lazy" width="600" height="400">
 <div class="card-content">
 <div class="card-date">
 <i class="far fa-calendar"></i>
@@ -526,7 +191,7 @@ Diamond Circus
 </div>
 </div>
 <div class="event-card">
-<img class="card-img" src="image2.webp" alt="Цирк приезжает к вам" loading="lazy">
+<img class="card-img" src="image2.webp" alt="Выездное цирковое шоу в Якутске для детей и взрослых" loading="lazy" width="600" height="400">
 <div class="card-content">
 <div class="card-date">
 <i class="far fa-calendar"></i>
@@ -539,7 +204,7 @@ Diamond Circus
 </div>
 </div>
 <div class="event-card">
-<img class="card-img" src="image3.webp" alt="Экскурсия за кулисами" loading="lazy">
+<img class="card-img" src="image3.webp" alt="Экскурсия за кулисы цирка и детские праздники в Якутске" loading="lazy" width="600" height="400">
 <div class="card-content">
 <div class="card-date">
 <i class="far fa-calendar"></i>
@@ -553,6 +218,7 @@ Diamond Circus
 </div>
 </div>
 </section>
+
 <section id="news" class="news-section">
 <h2 class="section-title">Новости цирка</h2>
 <div class="news-grid">
@@ -591,6 +257,7 @@ Diamond Circus
 </div>
 </div>
 </section>
+
 <section id="services">
 <h2 class="section-title">Наши услуги</h2>
 <div class="services-grid">
@@ -620,6 +287,7 @@ Diamond Circus
 </div>
 </div>
 </section>
+
 <section id="about" class="about-section">
 <h2 class="section-title">О нашем цирке</h2>
 <div class="about-content">
@@ -642,17 +310,19 @@ Diamond Circus
 </div>
 </div>
 </div>
-<img class="about-image" src="image4.webp" alt="Артисты цирка на арене" loading="lazy">
+<img class="about-image" src="image4.webp" alt="Артисты Государственного цирка Якутии на арене во время шоу" loading="lazy" width="600" height="400">
 </div>
 </section>
-<section id="gallery" style="background: white;">
+
+<section id="gallery" style="background:white;">
 <h2 class="section-title">Галерея</h2>
 <div class="gallery-grid">
-<img src="image5.webp" alt="Клоуны" loading="lazy">
-<img src="image6.webp" alt="Представление" loading="lazy">
-<img src="image7.webp" alt="Волшебник" loading="lazy">
+<img src="image5.webp" alt="Клоуны Государственного цирка Якутии" loading="lazy" width="600" height="400">
+<img src="image6.webp" alt="Цирковое представление в Якутске" loading="lazy" width="600" height="400">
+<img src="image7.webp" alt="Главное шоу Саха цирка" loading="lazy" width="600" height="400">
 </div>
 </section>
+
 <section id="contacts" class="contact-section">
 <h2 class="section-title">Свяжитесь с нами</h2>
 <div class="contact-grid">
@@ -688,42 +358,43 @@ Diamond Circus
 </div>
 </div>
 <div class="social-links">
-<a href="#" class="social-link"><i class="fab fa-vk"></i></a>
-<a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
-<a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+<a href="#" class="social-link" aria-label="ВКонтакте"><i class="fab fa-vk"></i></a>
+<a href="#" class="social-link" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+<a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
 </div>
 </div>
 <div class="form-container">
 <h3>Оставить заявку</h3>
 <form action="send.php" method="POST" id="contactForm">
-    <div class="form-group">
-        <label for="name">Ваше имя</label>
-        <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
-    </div>
-    <div class="form-group">
-        <label for="phone">Телефон</label>
-        <input type="tel" id="phone" name="phone" placeholder="+7 (999) 000-00-00" required>
-    </div>
-    <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="example@mail.ru">
-    </div>
-    <div class="form-group">
-        <label for="message">Сообщение или вопрос</label>
-        <textarea id="message" name="message" rows="4" placeholder="Хочу заказать день рождения..."></textarea>
-    </div>
-    <div class="consent-group">
-        <input type="checkbox" id="consent" name="consent" required>
-        <label for="consent">
-            Я согласен на обработку <a href="personal_data.html" target="_blank">персональных данных</a> 
-            и с условиями <a href="privacy_policy.html" target="_blank">политики конфиденциальности</a>
-        </label>
-    </div>
-    <button type="submit" class="btn-submit" id="submitBtn" disabled>Отправить заявку</button>
+<div class="form-group">
+<label for="name">Ваше имя</label>
+<input type="text" id="name" name="name" placeholder="Иван Иванов" required>
+</div>
+<div class="form-group">
+<label for="phone">Телефон</label>
+<input type="tel" id="phone" name="phone" placeholder="+7 (999) 000-00-00" required>
+</div>
+<div class="form-group">
+<label for="email">Email</label>
+<input type="email" id="email" name="email" placeholder="example@mail.ru">
+</div>
+<div class="form-group">
+<label for="message">Сообщение или вопрос</label>
+<textarea id="message" name="message" rows="4" placeholder="Хочу заказать день рождения..."></textarea>
+</div>
+<div class="consent-group">
+<input type="checkbox" id="consent" name="consent" required>
+<label for="consent">
+Я согласен на обработку <a href="personal_data.html" target="_blank">персональных данных</a>
+и с условиями <a href="privacy_policy.html" target="_blank">политики конфиденциальности</a>
+</label>
+</div>
+<button type="submit" class="btn-submit" id="submitBtn" disabled>Отправить заявку</button>
 </form>
 </div>
 </div>
 </section>
+
 <footer>
 <div class="footer-grid">
 <div class="footer-col">
@@ -764,32 +435,32 @@ Diamond Circus
 </div>
 </div>
 <div class="footer-bottom">
-    <p>&copy; 2026 ГБУК РС(Я) «Саха цирк». Все права защищены.</p>
-    <p>ИНН: 1435000000 | ОГРН: 100000000000</p>
-    <p style="margin-top:15px;">
-        <a href="admin_login.php" style="color:#adb5bd; font-size:0.85rem; opacity:0.7;">
-            🔒 Вход администрации
-        </a>
-    </p>
+<p>&copy; 2026 ГБУК РС(Я) «Саха цирк». Все права защищены.</p>
+<p>ИНН: 1435000000 | ОГРН: 100000000000</p>
+<p style="margin-top:15px;">
+<a href="admin_login.php" style="color:#adb5bd;font-size:.85rem;opacity:.7;">
+🔒 Вход администрации
+</a>
+</p>
 </div>
 </footer>
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href === '#') return;
-        e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    });
-});
 
-const consentCheckbox = document.getElementById('consent');
-const submitButton = document.getElementById('submitBtn');
-consentCheckbox.addEventListener('change', function() {
-    submitButton.disabled = !this.checked;
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+anchor.addEventListener('click',function(e){
+const href=this.getAttribute('href');
+if(href==='#')return;
+e.preventDefault();
+const target=document.querySelector(href);
+if(target){
+target.scrollIntoView({behavior:'smooth',block:'start'});
+}
+});
+});
+const consentCheckbox=document.getElementById('consent');
+const submitButton=document.getElementById('submitBtn');
+consentCheckbox.addEventListener('change',function(){
+submitButton.disabled=!this.checked;
 });
 </script>
 </body>
