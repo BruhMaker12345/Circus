@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<head>
+<meta charset="UTF-8">
+<!-- 1. Оптимизированный Title (самый важный тег для SEO, отображается во вкладке браузера и в поиске) -->
+<title>Государственный цирк Якутии в Якутске | Билеты, афиша и шоу Diamond Circus</title>
+
+<!-- 2. Meta Description (краткое описание для сниппета в поиске Яндекс/Google, повышает кликабельность) -->
+<meta name="description" content="Официальный сайт Государственного цирка Якутии (Diamond Circus). Купить билеты на цирковые представления и шоу в Якутске, заказать экскурсию за кулисы или детский праздник.">
+
+<!-- 3. Meta Keywords (сейчас почти не учитывается Google, но Яндекс иногда смотрит, плюс это хорошая практика для обучения) -->
+<meta name="keywords" content="Государственный цирк Якутии, цирк Якутск, купить билеты в цирк, Саха цирк афиша, экскурсия за кулисы цирка, детские праздники в Якутске">
+
+<!-- Остальные ваши стили и подключения... -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {
+--primary-color: #ff6b35;
+--secondary-color: #f7931e;
+--accent-warm: #ffd23f;
+--bg-light: #ffffff;
+--bg-soft: #fff8f0;
+--text-dark: #2b2d42;
+--text-medium: #6c757d;
+--border-color: #ffe5d0;
+--disabled-bg: #cccccc;
+--disabled-text: #999999;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: var(--bg-light);
+color: var(--text-dark);
+line-height: 1.6;
+}
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; }
+img { max-width: 100%; height: auto; display: block; }
+header {
+background: white;
+padding: 20px 5%;
+position: sticky;
+top: 0;
+z-index: 1000;
+box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.logo {
+font-size: 1.8rem;
+font-weight: bold;
+color: var(--primary-color);
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.logo i { color: var(--secondary-color); }
+nav ul { display: flex; gap: 30px; }
+nav a {
+color: var(--text-dark);
+font-weight: 500;
+position: relative;
+}
+nav a:hover { color: var(--primary-color); }
+nav a::after {
+content: '';
+position: absolute;
+bottom: -5px;
+left: 0;
+width: 0;
+height: 2px;
+background: var(--primary-color);
+transition: width 0.3s;
+}
+nav a:hover::after { width: 100%; }
+.btn-buy {
+background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+color: white;
+padding: 12px 30px;
+border-radius: 25px;
+font-weight: bold;
+display: inline-flex;
+align-items: center;
+gap: 8px;
+}
+.btn-buy:hover {
+transform: translateY(-2px);
+box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+}
+.mobile-menu-btn { display: none; font-size: 24px; cursor: pointer; color: var(--primary-color); }
+.hero {
+min-height: 600px;
+background-color: #ff6b35;
+background-image: url('image7.jpg');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 80px 20px;
+color: white;
+position: relative;
+overflow: hidden;
+}
+.hero::before {
+content: '';
+position: absolute;
+inset: 0;
+background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+z-index: 0;
+}
+.hero-content {
+position: relative;
+z-index: 1;
+max-width: 800px;
+text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+.hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
+.hero p { font-size: 1.3rem; margin-bottom: 30px; opacity: 0.95; }
+.hero .btn-buy {
+background: white;
+color: var(--primary-color);
+font-size: 1.2rem;
+padding: 15px 40px;
+}
+.hero .btn-buy:hover {
+background: var(--accent-warm);
+color: var(--text-dark);
+}
+section { padding: 80px 10%; }
+.section-title {
+text-align: center;
+font-size: 2.5rem;
+margin-bottom: 50px;
+color: var(--text-dark);
+position: relative;
+}
+.section-title::after {
+content: '';
+display: block;
+width: 80px;
+height: 4px;
+background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+margin: 15px auto;
+border-radius: 2px;
+}
+.afisha-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+gap: 30px;
+}
+.event-card {
+background: white;
+border-radius: 15px;
+overflow: hidden;
+box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+transition: transform 0.3s, box-shadow 0.3s;
+}
+.event-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+}
+.card-img {
+height: 220px;
+width: 100%;
+object-fit: cover;
+background-color: var(--border-color);
+display: block;
+}
+.card-content { padding: 25px; }
+.card-date {
+color: var(--primary-color);
+font-weight: bold;
+font-size: 0.9rem;
+display: flex;
+align-items: center;
+gap: 5px;
+margin-bottom: 10px;
+}
+.card-title { font-size: 1.5rem; margin: 10px 0; color: var(--text-dark); }
+.card-price {
+font-size: 1.3rem;
+color: var(--secondary-color);
+font-weight: bold;
+margin-bottom: 15px;
+}
+.card-desc { color: var(--text-medium); margin-bottom: 20px; font-size: 0.95rem; }
+.btn-card {
+display: block;
+width: 100%;
+padding: 12px;
+text-align: center;
+background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+color: white;
+border-radius: 8px;
+font-weight: bold;
+border: none;
+cursor: pointer;
+transition: all 0.3s;
+}
+.btn-card:hover {
+transform: translateY(-2px);
+box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+}
+.news-section { background: var(--bg-soft); }
+.news-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 30px;
+}
+.news-card {
+background: white;
+border-radius: 12px;
+padding: 25px;
+box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+transition: transform 0.3s;
+border-left: 4px solid var(--primary-color);
+}
+.news-card:hover { transform: translateY(-5px); }
+.news-date {
+color: var(--text-medium);
+font-size: 0.9rem;
+margin-bottom: 10px;
+display: flex;
+align-items: center;
+gap: 5px;
+}
+.news-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--text-dark); }
+.news-excerpt { color: var(--text-medium); margin-bottom: 15px; }
+.news-link {
+color: var(--primary-color);
+font-weight: bold;
+display: inline-flex;
+align-items: center;
+gap: 5px;
+}
+.services-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 30px;
+}
+.service-card {
+background: white;
+border-radius: 15px;
+padding: 30px;
+text-align: center;
+box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+transition: transform 0.3s;
+border: 2px solid transparent;
+}
+.service-card:hover {
+transform: translateY(-10px);
+border-color: var(--primary-color);
+}
+.service-icon {
+width: 80px;
+height: 80px;
+background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 auto 20px;
+color: white;
+font-size: 2rem;
+}
+.service-card h3 { font-size: 1.4rem; margin-bottom: 15px; color: var(--text-dark); }
+.service-card p { color: var(--text-medium); margin-bottom: 15px; }
+.service-phone { color: var(--primary-color); font-weight: bold; font-size: 1.1rem; }
+.about-section { background: var(--bg-soft); }
+.about-content {
+display: flex;
+flex-wrap: wrap;
+gap: 50px;
+align-items: center;
+}
+.about-text { flex: 1; min-width: 300px; }
+.about-text h3 { font-size: 2rem; margin-bottom: 20px; color: var(--text-dark); }
+.about-text p { color: var(--text-medium); margin-bottom: 15px; font-size: 1.05rem; }
+.about-stats { display: flex; gap: 30px; margin-top: 30px; }
+.stat-item { text-align: center; }
+.stat-number {
+font-size: 2.5rem;
+font-weight: bold;
+background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+.stat-label { color: var(--text-medium); font-size: 0.9rem; }
+.about-image {
+flex: 1;
+min-width: 300px;
+height: 400px;
+width: 100%;
+object-fit: cover;
+background-color: var(--border-color);
+border-radius: 20px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+display: block;
+}
+.gallery-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 20px;
+}
+.gallery-grid img {
+width: 100%;
+height: 250px;
+object-fit: cover;
+border-radius: 15px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.contact-section { background: white; }
+.contact-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 50px;
+}
+.contact-info h3 { font-size: 1.8rem; margin-bottom: 20px; color: var(--text-dark); }
+.contact-item {
+display: flex;
+align-items: flex-start;
+gap: 15px;
+margin-bottom: 25px;
+}
+.contact-icon {
+width: 50px;
+height: 50px;
+background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+font-size: 1.3rem;
+flex-shrink: 0;
+}
+.contact-details h4 { color: var(--text-dark); margin-bottom: 5px; }
+.contact-details p { color: var(--text-medium); }
+.contact-details a { color: var(--primary-color); font-weight: bold; }
+.social-links { display: flex; gap: 15px; margin-top: 30px; }
+.social-link {
+width: 45px;
+height: 45px;
+background: var(--bg-soft);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--primary-color);
+font-size: 1.2rem;
+transition: all 0.3s;
+}
+.social-link:hover {
+background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+color: white;
+transform: translateY(-3px);
+}
+.form-container {
+background: var(--bg-soft);
+padding: 40px;
+border-radius: 15px;
+border: 2px solid var(--border-color);
+}
+.form-container h3 { font-size: 1.8rem; margin-bottom: 25px; color: var(--text-dark); }
+.form-group { margin-bottom: 20px; }
+.form-group label {
+display: block;
+margin-bottom: 8px;
+color: var(--text-dark);
+font-weight: 500;
+}
+.form-group input,
+.form-group textarea {
+width: 100%;
+padding: 12px 15px;
+border: 2px solid var(--border-color);
+border-radius: 8px;
+font-size: 1rem;
+transition: border-color 0.3s;
+background: white;
+font-family: inherit;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+outline: none;
+border-color: var(--primary-color);
+}
+.consent-group {
+display: flex;
+align-items: flex-start;
+gap: 10px;
+margin-bottom: 20px;
+margin-top: 20px;
+}
+.consent-group input[type="checkbox"] {
+width: auto;
+margin-top: 4px;
+cursor: pointer;
+flex-shrink: 0;
+}
+.consent-group label {
+font-size: 0.9rem;
+color: var(--text-medium);
+line-height: 1.5;
+cursor: pointer;
+margin-bottom: 0;
+}
+.consent-group a {
+color: var(--primary-color);
+font-weight: 500;
+text-decoration: underline;
+}
+.consent-group a:hover { color: var(--secondary-color); }
+.btn-submit {
+background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+color: white;
+border: none;
+padding: 15px 30px;
+font-size: 1.1rem;
+font-weight: bold;
+cursor: pointer;
+width: 100%;
+border-radius: 8px;
+transition: all 0.3s;
+}
+.btn-submit:hover:not(:disabled) {
+transform: translateY(-2px);
+box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+}
+.btn-submit:disabled {
+background: var(--disabled-bg);
+color: var(--disabled-text);
+cursor: not-allowed;
+transform: none;
+box-shadow: none;
+}
+footer {
+background: linear-gradient(135deg, var(--text-dark), #1a1a2e);
+color: white;
+padding: 50px 10% 30px;
+}
+.footer-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 40px;
+margin-bottom: 40px;
+}
+.footer-col h4 { margin-bottom: 20px; color: var(--secondary-color); }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col a { color: #adb5bd; transition: color 0.3s; }
+.footer-col a:hover { color: var(--secondary-color); }
+.footer-bottom {
+border-top: 1px solid #495057;
+padding-top: 30px;
+text-align: center;
+color: #adb5bd;
+font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+nav ul { display: none; }
+.mobile-menu-btn { display: block; }
+.hero h1 { font-size: 2.2rem; }
+.hero p { font-size: 1.1rem; }
+header { padding: 15px 20px; }
+section { padding: 50px 5%; }
+.contact-grid { grid-template-columns: 1fr; }
+.about-content { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">
+<i class="fas fa-star"></i>
+Diamond Circus
+</div>
+<nav>
+<ul>
+<li><a href="#afisha">Афиша</a></li>
+<li><a href="#news">Новости</a></li>
+<li><a href="#services">Услуги</a></li>
+<li><a href="#about">О цирке</a></li>
+<li><a href="#contacts">Контакты</a></li>
+</ul>
+</nav>
+<a href="#afisha" class="btn-buy">
+<i class="fas fa-ticket-alt"></i>
+Купить билет
+</a>
+<div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+</header>
+<section class="hero">
+<div class="hero-content">
+<h1>Магия Северного Цирка в Якутске</h1>
+<p>Государственный цирк Якутии имени Марфы и Сергея Расторгуевых. Уникальные шоу, объединяющие традиции олонхо и современное цирковое искусство.</p>
+<a href="#afisha" class="btn-buy">
+<i class="fas fa-calendar-alt"></i>
+Смотреть афишу
+</a>
+</div>
+</section>
+<section id="afisha">
+<h2 class="section-title">Ближайшие представления</h2>
+<div class="afisha-grid">
+<div class="event-card">
+<img class="card-img" src="image1.jpg" alt="Время Приключений" loading="lazy">
+<div class="card-content">
+<div class="card-date">
+<i class="far fa-calendar"></i>
+25 ОКТЯБРЯ — 29 НОЯБРЯ
+</div>
+<h3 class="card-title">Время Приключений</h3>
+<div class="card-price">от 800 руб.</div>
+<p class="card-desc">Увлекательное цирковое представление для всей семьи. Яркие костюмы, дрессированные животные и магия арены.</p>
+<a href="#" class="btn-card">Купить билет</a>
+</div>
+</div>
+<div class="event-card">
+<img class="card-img" src="image2.jpg" alt="Цирк приезжает к вам" loading="lazy">
+<div class="card-content">
+<div class="card-date">
+<i class="far fa-calendar"></i>
+ПО КОЛЛЕКТИВНЫМ ЗАЯВКАМ
+</div>
+<h3 class="card-title">Цирк приезжает к вам!</h3>
+<div class="card-price">Цена договорная</div>
+<p class="card-desc">Выездная программа. Организация праздников в школах, детских садах и на корпоративах.</p>
+<a href="#contacts" class="btn-card">Заказать</a>
+</div>
+</div>
+<div class="event-card">
+<img class="card-img" src="image3.jpg" alt="Экскурсия за кулисами" loading="lazy">
+<div class="card-content">
+<div class="card-date">
+<i class="far fa-calendar"></i>
+ЕЖЕДНЕВНО: 11:00 и 14:00
+</div>
+<h3 class="card-title">Экскурсия «За кулисами»</h3>
+<div class="card-price">Уточняйте по телефону</div>
+<p class="card-desc">Уникальная развлекательно-познавательная экскурсия. Узнайте секреты цирковой жизни изнутри!</p>
+<a href="#contacts" class="btn-card">Записаться</a>
+</div>
+</div>
+</div>
+</section>
+<section id="news" class="news-section">
+<h2 class="section-title">Новости цирка</h2>
+<div class="news-grid">
+<div class="news-card">
+<div class="news-date">
+<i class="far fa-clock"></i>
+19 октября 2026
+</div>
+<h3 class="news-title">Успешное завершение сказки «Богатырь и Мифический Змей»</h3>
+<p class="news-excerpt">В минувшее воскресенье с успехом состоялся заключительный показ цирковой сказки по мотивам олонхо «Дыырай Бэргэн»...</p>
+<a href="#" class="news-link">
+Читать далее <i class="fas fa-arrow-right"></i>
+</a>
+</div>
+<div class="news-card">
+<div class="news-date">
+<i class="far fa-clock"></i>
+16 октября 2026
+</div>
+<h3 class="news-title">Экскурсия «За кулисами» приглашает ребят</h3>
+<p class="news-excerpt">Приглашаем ребят на уникальную развлекательно-познавательную экскурсию. Узнайте все секреты циркового мастерства...</p>
+<a href="#" class="news-link">
+Читать далее <i class="fas fa-arrow-right"></i>
+</a>
+</div>
+<div class="news-card">
+<div class="news-date">
+<i class="far fa-clock"></i>
+15 октября 2026
+</div>
+<h3 class="news-title">Премьера «Время Приключений» уже скоро!</h3>
+<p class="news-excerpt">С 25 октября на арене Государственного цирка Якутии вас ждет увлекательное цирковое представление...</p>
+<a href="#" class="news-link">
+Читать далее <i class="fas fa-arrow-right"></i>
+</a>
+</div>
+</div>
+</section>
+<section id="services">
+<h2 class="section-title">Наши услуги</h2>
+<div class="services-grid">
+<div class="service-card">
+<div class="service-icon">
+<i class="fas fa-birthday-cake"></i>
+</div>
+<h3>Детские праздники и День рождения в цирке</h3>
+<p>Незабываемый праздник для ребенка в Государственном цирке Якутии. Поздравления от клоунов, сладкая вата и фото с артистами.</p>
+<div class="service-phone">+7 914 270-37-73</div>
+</div>
+<div class="service-card">
+<div class="service-icon">
+<i class="fas fa-truck-moving"></i>
+</div>
+<h3>Выездные шоу</h3>
+<p>Организуем выступления наших артистов на ваших площадках по всей Якутии и за ее пределами.</p>
+<div class="service-phone">+7 914 293-25-70</div>
+</div>
+<div class="service-card">
+<div class="service-icon">
+<i class="fas fa-graduation-cap"></i>
+</div>
+<h3>Цирковые студии</h3>
+<p>Обучение искусству цирка для детей и взрослых. Акробатика, жонглирование, эквилибр.</p>
+<div class="service-phone">Запись в кассе</div>
+</div>
+</div>
+</section>
+<section id="about" class="about-section">
+<h2 class="section-title">О нашем цирке</h2>
+<div class="about-content">
+<div class="about-text">
+<h3>Самый северный цирк в мире</h3>
+<p>Сахацирк сегодня — это синтез национального самобытного достояния Якутии и высоких мировых стандартов циркового искусства.</p>
+<p>Наши артисты — призеры и лауреаты всемирных цирковых фестивалей. В репертуаре представлены головокружительные полеты на мачтах, экстремальные номера канатоходцев, воздушная гимнастика и уникальные этно-перформансы по мотивам олонхо.</p>
+<div class="about-stats">
+<div class="stat-item">
+<div class="stat-number">50+</div>
+<div class="stat-label">Лет истории</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">100+</div>
+<div class="stat-label">Артистов</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">30+</div>
+<div class="stat-label">Наград</div>
+</div>
+</div>
+</div>
+<img class="about-image" src="image4.jpg" alt="Артисты цирка на арене" loading="lazy">
+</div>
+</section>
+<section id="gallery" style="background: white;">
+<h2 class="section-title">Галерея</h2>
+<div class="gallery-grid">
+<img src="image5.jpg" alt="Клоуны" loading="lazy">
+<img src="image6.jpg" alt="Представление" loading="lazy">
+<img src="image7.jpg" alt="Волшебник" loading="lazy">
+</div>
+</section>
+<section id="contacts" class="contact-section">
+<h2 class="section-title">Свяжитесь с нами</h2>
+<div class="contact-grid">
+<div class="contact-info">
+<h3>Контактная информация</h3>
+<div class="contact-item">
+<div class="contact-icon">
+<i class="fas fa-phone"></i>
+</div>
+<div class="contact-details">
+<h4>Касса и бронирование</h4>
+<p><a href="tel:84112429568">8 (4112) 42-95-68</a></p>
+<p><a href="tel:89142735537">8-914-2-735-537</a></p>
+</div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">
+<i class="fas fa-map-marker-alt"></i>
+</div>
+<div class="contact-details">
+<h4>Адрес</h4>
+<p>г. Якутск, ул. Петра Алексеева, 58</p>
+</div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">
+<i class="far fa-clock"></i>
+</div>
+<div class="contact-details">
+<h4>Режим работы кассы</h4>
+<p>Ежедневно с 10:00 до 19:00</p>
+<p>Без перерыва</p>
+</div>
+</div>
+<div class="social-links">
+<a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+<a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+<a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+</div>
+</div>
+<div class="form-container">
+<h3>Оставить заявку</h3>
+<form action="send.php" method="POST" id="contactForm">
+    <div class="form-group">
+        <label for="name">Ваше имя</label>
+        <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
+    </div>
+    <div class="form-group">
+        <label for="phone">Телефон</label>
+        <input type="tel" id="phone" name="phone" placeholder="+7 (999) 000-00-00" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="example@mail.ru">
+    </div>
+    <div class="form-group">
+        <label for="message">Сообщение или вопрос</label>
+        <textarea id="message" name="message" rows="4" placeholder="Хочу заказать день рождения..."></textarea>
+    </div>
+    <div class="consent-group">
+        <input type="checkbox" id="consent" name="consent" required>
+        <label for="consent">
+            Я согласен на обработку <a href="personal_data.html" target="_blank">персональных данных</a> 
+            и с условиями <a href="privacy_policy.html" target="_blank">политики конфиденциальности</a>
+        </label>
+    </div>
+    <button type="submit" class="btn-submit" id="submitBtn" disabled>Отправить заявку</button>
+</form>
+</div>
+</div>
+</section>
+<footer>
+<div class="footer-grid">
+<div class="footer-col">
+<h4>О цирке</h4>
+<ul>
+<li><a href="#">История</a></li>
+<li><a href="#">Администрация</a></li>
+<li><a href="#">Награды</a></li>
+<li><a href="#">Вакансии</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Посетителям</h4>
+<ul>
+<li><a href="#">Правила посещения</a></li>
+<li><a href="#">Льготы</a></li>
+<li><a href="#">Схема зала</a></li>
+<li><a href="#">Доставка билетов</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Документы</h4>
+<ul>
+<li><a href="#">Противодействие коррупции</a></li>
+<li><a href="#">Закупки</a></li>
+<li><a href="privacy_policy.html" target="_blank">Политика конфиденциальности</a></li>
+<li><a href="#">Охрана труда</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Медиатека</h4>
+<ul>
+<li><a href="#">Фотогалерея</a></li>
+<li><a href="#">Видео</a></li>
+<li><a href="#">Пресса о нас</a></li>
+<li><a href="#">Гастроли</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+    <p>&copy; 2026 ГБУК РС(Я) «Саха цирк». Все права защищены.</p>
+    <p>ИНН: 1435000000 | ОГРН: 100000000000</p>
+    <p style="margin-top:15px;">
+        <a href="admin_login.php" style="color:#adb5bd; font-size:0.85rem; opacity:0.7;">
+            🔒 Вход администрации
+        </a>
+    </p>
+</div>
+</footer>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
+
+const consentCheckbox = document.getElementById('consent');
+const submitButton = document.getElementById('submitBtn');
+consentCheckbox.addEventListener('change', function() {
+    submitButton.disabled = !this.checked;
+});
+</script>
+</body>
+</html>
