@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Запрещаем индексацию технических и админских файлов
+Disallow: /admin_login.php
+Disallow: /admin.php
+Disallow: /send.php
+Disallow: /db.php
+Disallow: /logout.php
+Disallow: /setup.php
+
+# Указываем путь к карте сайта
+Sitemap: https://diamondcircus.site.je/sitemap.xml

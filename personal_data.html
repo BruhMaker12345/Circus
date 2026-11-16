@@ -2,9 +2,10 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Согласие на обработку персональных данных | Государственный цирк Якутии</title>
 <meta name="description" content="Официальное согласие на обработку персональных данных пользователей сайта Государственного цирка Якутии (Diamond Circus) в соответствии с ФЗ-152.">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="icon" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"%3E%3Cpath fill="%23f7931e" d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1l-73.6 144.2-159.9 25.4c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2l144.4-73.4L432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2l-25.3-159.9 114.4-114.5c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3z"/%3E%3C/svg%3E'>
 <style>
 :root {
 --primary-color: #ff6b35;
@@ -160,17 +161,34 @@ margin-top: 50px;
 .logo { font-size: 1.2rem; }
 .back-btn { padding: 8px 18px; font-size: 0.9rem; }
 }
+
+/* доступность и без внешних иконок */
+.i{width:1em;height:1em;fill:currentColor;vertical-align:-.125em;flex-shrink:0;display:inline-block}
+:root{--primary-text:#c2410c;--secondary-text:#b45309;--btn-gradient:linear-gradient(135deg,#c2410c,#b45309);--text-medium:#5b646d}
+.logo{color:var(--primary-text)}
+.logo .i{color:var(--secondary-color)}
+.back-btn{background:var(--btn-gradient)}
+.doc-section h2{color:var(--primary-text)}
+.doc-section ul li::before{color:var(--primary-text)}
+.doc-highlight .i{color:var(--primary-text);margin-right:8px}
+a:focus-visible{outline:3px solid var(--primary-text);outline-offset:2px}
 </style>
 </head>
 <body>
+<!-- Иконки: Font Awesome Free (CC BY 4.0, https://fontawesome.com/license/free), встроены как SVG вместо внешних шрифтов -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-star" viewBox="0 0 576 512"><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1l-73.6 144.2-159.9 25.4c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2l144.4-73.4L432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2l-25.3-159.9 114.4-114.5c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3z"/></symbol>
+<symbol id="i-arrow-l" viewBox="0 0 512 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H109.3l105.4-105.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></symbol>
+<symbol id="i-info" viewBox="0 0 512 512"><path d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512m-32-352a32 32 0 1 1 64 0 32 32 0 1 1-64 0m-8 64h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-80c-13.3 0-24-10.7-24-24s10.7-24 24-24h24v-64h-24c-13.3 0-24-10.7-24-24s10.7-24 24-24"/></symbol>
+</defs></svg>
 
 <header class="doc-header">
 <div class="logo">
-<i class="fas fa-star"></i>
+<svg class="i" aria-hidden="true" focusable="false"><use href="#i-star"/></svg>
 Diamond Circus
 </div>
 <a href="index.html" class="back-btn">
-<i class="fas fa-arrow-left"></i>
+<svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow-l"/></svg>
 На главную
 </a>
 </header>
@@ -227,7 +245,7 @@ Diamond Circus
 </section>
 
 <div class="doc-highlight">
-<p><i class="fas fa-info-circle"></i> Дата согласия фиксируется моментом нажатия кнопки «Отправить заявку» на сайте Оператора.</p>
+<p><svg class="i" aria-hidden="true" focusable="false"><use href="#i-info"/></svg> Дата согласия фиксируется моментом нажатия кнопки «Отправить заявку» на сайте Оператора.</p>
 </div>
 
 <p class="doc-footer-note">

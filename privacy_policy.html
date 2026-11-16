@@ -2,9 +2,10 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Политика конфиденциальности | Государственный цирк Якутии</title>
 <meta name="description" content="Политика конфиденциальности и защиты персональных данных пользователей официального сайта Государственного цирка Якутии.">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="icon" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"%3E%3Cpath fill="%23f7931e" d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1l-73.6 144.2-159.9 25.4c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2l144.4-73.4L432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2l-25.3-159.9 114.4-114.5c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3z"/%3E%3C/svg%3E'>
 <style>
 :root {
 --primary-color: #ff6b35;
@@ -169,17 +170,35 @@ margin-top: 50px;
 .logo { font-size: 1.2rem; }
 .back-btn { padding: 8px 18px; font-size: 0.9rem; }
 }
+
+/* доступность и без внешних иконок */
+.i{width:1em;height:1em;fill:currentColor;vertical-align:-.125em;flex-shrink:0;display:inline-block}
+:root{--primary-text:#c2410c;--secondary-text:#b45309;--btn-gradient:linear-gradient(135deg,#c2410c,#b45309);--text-medium:#5b646d}
+.logo{color:var(--primary-text)}
+.logo .i{color:var(--secondary-color)}
+.back-btn{background:var(--btn-gradient)}
+.doc-section h2{color:var(--primary-text)}
+.doc-section ul li::before{color:var(--primary-text)}
+.doc-highlight .i{color:var(--primary-text);margin-right:8px}
+a:focus-visible{outline:3px solid var(--primary-text);outline-offset:2px}
 </style>
 </head>
 <body>
+<!-- Иконки: Font Awesome Free (CC BY 4.0, https://fontawesome.com/license/free), встроены как SVG вместо внешних шрифтов -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-star" viewBox="0 0 576 512"><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1l-73.6 144.2-159.9 25.4c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2l144.4-73.4L432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2l-25.3-159.9 114.4-114.5c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3z"/></symbol>
+<symbol id="i-arrow-l" viewBox="0 0 512 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H109.3l105.4-105.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></symbol>
+<symbol id="i-phone" viewBox="0 0 512 512"><path d="M160.2 25c-7.9-18.9-28.5-28.9-48.1-23.6l-5.5 1.5C42 20.5-13.2 83.1 2.9 159.3 40 334.3 177.7 472 352.7 509.1 429 525.3 491.5 470 509.1 405.4l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2c-70.3-34.9-126.9-93.3-159.4-165l44.2-36c13.9-11.3 18.6-30.4 11.8-47z"/></symbol>
+<symbol id="i-pin" viewBox="0 0 384 512"><path d="M0 188.6C0 84.4 86 0 192 0s192 84.4 192 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0C120.1 450.9-.1 307.9-.1 188.6zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128"/></symbol>
+</defs></svg>
 
 <header class="doc-header">
 <div class="logo">
-<i class="fas fa-star"></i>
+<svg class="i" aria-hidden="true" focusable="false"><use href="#i-star"/></svg>
 Diamond Circus
 </div>
 <a href="index.html" class="back-btn">
-<i class="fas fa-arrow-left"></i>
+<svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow-l"/></svg>
 На главную
 </a>
 </header>
@@ -247,8 +266,8 @@ Diamond Circus
 <h2>8. Контакты</h2>
 <p>По всем вопросам, связанным с обработкой персональных данных, обращаться:</p>
 <div class="doc-highlight">
-<p><i class="fas fa-phone"></i> <strong>Тел.:</strong> 8 (4112) 42-95-68, 8-914-2-735-537</p>
-<p><i class="fas fa-map-marker-alt"></i> <strong>Адрес:</strong> 677000, г. Якутск, ул. Петра Алексеева, 58</p>
+<p><svg class="i" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg> <strong>Тел.:</strong> 8 (4112) 42-95-68, 8-914-2-735-537</p>
+<p><svg class="i" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg> <strong>Адрес:</strong> 677000, г. Якутск, ул. Петра Алексеева, 58</p>
 </div>
 </section>
 
